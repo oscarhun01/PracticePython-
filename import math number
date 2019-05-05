@@ -1,0 +1,15 @@
+numbers=[]
+while True:
+    x=input('請輸入一個整數')
+    try:
+        numbers.append(int(x))
+    except:
+        print('不是整數')
+    while True:
+        flag=input('繼續輸入嗎？（Ｙ/N)') 
+    if flag.lower()not in('Y'or'N'):
+        print('只能輸入Ｙor N')
+    else:
+        break
+    if flag.lower()=='N':
+        break    
