@@ -1,0 +1,23 @@
+# The source of the OCW is from https://morvanzhou.github.io/tutorials
+import tkinter as tk
+window=tk.Tk()
+window.title('my window')
+window.geometry('300x200')
+var=tk.StringVar()
+l=tk.Label(window,textvariable=var,bg='cyan',font='Arial',width=15,height=2)
+l.pack()
+hit=False
+def hit_me():
+    global hit
+    if hit==False:
+        hit=True
+        var.set('you hit me')
+    else:
+        hit=False
+        var.set('')
+
+b=tk.Button(window,text='hit me',width=15,height=2,command=hit_me)
+b.pack()
+
+window.mainloop()
+
