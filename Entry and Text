@@ -1,0 +1,21 @@
+# This is a practice for an OCW from https://morvanzhou.github.io/tutorials/python-basic/tkinter/2-02-entry-text/
+import tkinter as tk
+window=tk.Tk()
+window.title('my window')
+window.geometry('300x200')
+e=tk.Entry(window,show='*')
+e.pack()
+def decode():
+    var=e.get()
+    t.insert('insert',var)
+def uncode():
+    var=e.get()
+    t.insert(2.2,var)
+b1=tk.Button(window,text='insert point',width=15,height=2,command=decode)
+t=tk.Text(window,height=2)
+b1.pack()
+b2=tk.Button(window,text='insert end',width=15,height=2,command=uncode)
+b2.pack()
+t.pack()
+window.mainloop()
+
