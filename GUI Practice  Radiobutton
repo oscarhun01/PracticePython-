@@ -1,0 +1,20 @@
+#This is a OCW practice from https://morvanzhou.github.io/tutorials/python-basic/tkinter/2-04-radiobutton/
+import tkinter as tk
+window=tk.Tk()
+window.title('my window')
+window.geometry('300x200')
+var1=tk.StringVar()
+l=tk.Label(window,bg='yellow',width=4,textvariable=var1,text='empty')
+l.pack()
+def print_section():
+    l.config(text='You have selected'+var1.get())
+r1=tk.Radiobutton(window,text='OptionA',variable=var1,value='A',command=print_section)
+r1.pack()
+r2=tk.Radiobutton(window,text='OptionB',variable=var1,value='B',command=print_section)
+r2.pack()
+r3=tk.Radiobutton(window,text='OptionC',variable=var1,value='C',command=print_section)
+r3.pack()
+r4=tk.Radiobutton(window,text='OptionD',variable=var1,value='D',command=print_section)
+r4.pack()
+window.mainloop()
+
